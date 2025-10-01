@@ -197,4 +197,72 @@
   }
 </nav>
 <router-outlet></router-outlet>
-<footer></footer>
+<footer class="bg-slate-800 text-gray-300 py-10">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- لوگو و معرفی -->
+    <div>
+      <img src="logo.png" alt="Aysan Khodro" class="h-16 mb-4" />
+      <p class="text-sm leading-6">
+        شرکت آیسان خودرو، پیشرو در صنعت خودروهای سنگین و خدمات پس از فروش.
+      </p>
+      <!-- شبکه‌های اجتماعی با آیکن متریال -->
+      <div class="flex space-x-4 mt-4 text-white text-2xl">
+        <a href="#" aria-label="Telegram">
+          <img class="w-8 h-8" src="/social/telegram-app.svg" alt="" />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img class="w-8 h-8" src="/social/instagram.svg" alt="" />
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <img class="w-8 h-8" src="/social/linkedin.svg" alt="" />
+        </a>
+        <a href="#" aria-label="WhatsApp">
+          <img class="w-8 h-8" src="/social/whatsapp.svg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <!-- بخش لینک‌ها - دو ستون در موبایل -->
+    <div class="md:col-span-2">
+      <h4 class="text-white font-semibold mb-4">لینک‌ها</h4>
+      <div class="grid grid-cols-2 gap-4 text-sm">
+        <div>
+          <ul class="space-y-2">
+            <li><a href="/" class="hover:text-white">صفحه اصلی</a></li>
+            <li>
+              <a [routerLink]="'/about-us'" class="hover:text-white"
+                >درباره ما</a
+              >
+            </li>
+            <li><a href="/products" class="hover:text-white">محصولات</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="space-y-2">
+            <li><a href="/services" class="hover:text-white">خدمات</a></li>
+            <li><a href="/team" class="hover:text-white">اعضا و مدیران</a></li>
+            <li>
+              <a [routerLink]="'/contact-us'" class="hover:text-white"
+                >تماس با ما</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- تماس -->
+    <div>
+      <h4 class="text-white font-semibold mb-4">ارتباط با ما</h4>
+      <p class="text-sm">تهران، خیابان ...</p>
+      <p class="text-sm">تلفن: 021-xxxxxxx</p>
+      <p class="text-sm">ایمیل: info&#64;aysan.com</p>
+    </div>
+  </div>
+
+  <div
+    class="border-t border-gray-600 mt-10 pt-6 text-center text-sm text-gray-400"
+  >
+    © 2025 Aysan Khodro. همه حقوق محفوظ است.
+  </div>
+</footer>

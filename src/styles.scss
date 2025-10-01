@@ -44,6 +44,10 @@
 * {
   font-family: "iranSans-r" !important;
 }
+.primary {
+  background-color: var(--color-primary) !important;
+  color: var(--color-tertiary) !important;
+}
 .secondary {
   background-color: var(--color-secondary) !important;
   color: var(--color-primary) !important;

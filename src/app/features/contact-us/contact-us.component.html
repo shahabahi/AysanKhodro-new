@@ -20,7 +20,10 @@
             placeholder="نام و نام خانوادگی"
             formControlName="fullName"
           />
-          <mat-icon matSuffix class="material-symbols-outlined"
+          <mat-icon
+            class="material-icons"
+            matSuffix
+            class="material-symbols-outlined"
             >person</mat-icon
           >
           <mat-error
@@ -38,7 +41,7 @@
             placeholder="ایمیل"
             formControlName="email"
           />
-          <mat-icon matSuffix>email</mat-icon>
+          <mat-icon class="material-icons" matSuffix>email</mat-icon>
           <mat-error *ngIf="contactForm.controls['email'].hasError('required')">
             ایمیل الزامی است
           </mat-error>
@@ -55,7 +58,7 @@
             placeholder="متن پیام"
             formControlName="message"
           ></textarea>
-          <mat-icon matSuffix>message</mat-icon>
+          <mat-icon class="material-icons" matSuffix>message</mat-icon>
           <mat-error
             *ngIf="contactForm.controls['message'].hasError('required')"
           >
