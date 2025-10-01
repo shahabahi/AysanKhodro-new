@@ -1,0 +1,44 @@
+@use "@angular/material" as mat;
+@use "../theme-colors" as my-theme;
+@import "tailwindcss";
+:root {
+  --color-primary: #0a2342;
+  --color-secondary: #d4af37;
+  --color-tertiary: #f5f5f5;
+  --color-neutral: #333333;
+  --color-neutral-variant: #ffffff;
+  --color-error: #a31245;
+}
+@font-face {
+  font-family: "iranSans-r";
+  src: url(./../public/irsans-l.ttf) format("truetype");
+}
+
+// @font-face {
+//   font-family: "iranSans-b";
+//   src: url(irsans-b.ttf) format("truetype");
+// }
+
+* {
+  font-family: "iranSans-r" !important;
+}
+.secondary {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+}
+.secondary-text {
+  color: var(--color-secondary) !important;
+}
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: my-theme.$primary-palette,
+        tertiary: my-theme.$tertiary-palette,
+        theme-type: light,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}

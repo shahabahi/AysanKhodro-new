@@ -1,0 +1,250 @@
+<nav
+  class="relative bg-slate-800 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
+>
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <!-- Mobile menu button -->
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <button
+          type="button"
+          (click)="toggleMenu()"
+          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500"
+        >
+          <span class="sr-only">Open main menu</span>
+
+          <!-- آیکن باز -->
+          @if (!mobileMenuOpen) {
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+            class="size-6"
+          >
+            <path
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          }
+
+          <!-- آیکن بستن -->
+          @if (mobileMenuOpen) {
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+            class="size-6"
+          >
+            <path
+              d="M6 18 18 6M6 6l12 12"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          }
+        </button>
+      </div>
+
+      <!-- لوگو و منوی دسکتاپ -->
+      <div
+        class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+      >
+        <div class="flex shrink-0 items-center ml-3">
+          <img src="logo.png" alt="Your Company" class="h-8 w-auto" />
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white"
+              >صفحه اصلی</a
+            >
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+              >درباره ما</a
+            >
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+              >نمایش کارخانه</a
+            >
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+              >محصولات</a
+            >
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+              >خدمات</a
+            >
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+              >وبلاگ</a
+            >
+            <a
+              href="#"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+              >تماس با ما</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- بخش راست (نوتیفیکیشن و پروفایل) -->
+      <!-- <div
+        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+      >
+        <button
+          type="button"
+          class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
+        >
+          <span class="sr-only">View notifications</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+            class="size-6"
+          >
+            <path
+              d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <el-dropdown class="relative ml-3">
+          <button
+            class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+          >
+            <span class="sr-only">Open user menu</span>
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?...q=80"
+              alt=""
+              class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10"
+            />
+          </button>
+
+          <el-menu
+            anchor="bottom end"
+            popover
+            class="w-48 origin-top-right rounded-md bg-gray-800 py-1"
+          >
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300"
+              >Your profile</a
+            >
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300"
+              >Settings</a
+            >
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300"
+              >Sign out</a
+            >
+          </el-menu>
+        </el-dropdown>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- منوی موبایل -->
+  @if (mobileMenuOpen) {
+  <div class="sm:hidden space-y-1 px-2 pt-2 pb-3">
+    <a
+      href="#"
+      class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white"
+      >صفحه اصلی</a
+    >
+    <a
+      href="#"
+      class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+      >درباره ما</a
+    >
+    <a
+      href="#"
+      class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+      >نمایش کارخانه</a
+    >
+    <a
+      href="#"
+      class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+      >محصولات</a
+    >
+    <a
+      href="#"
+      class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+      >خدمات</a
+    >
+    <a
+      href="#"
+      class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+      >وبلاگ</a
+    >
+    <a
+      href="#"
+      class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+      >تماس با ما</a
+    >
+  </div>
+  }
+</nav>
+
+<!-- هیرو -->
+<!-- <section class="hero">
+  <h1>حرکت با اطمینان، تولید با کیفیت</h1>
+  <button mat-raised-button class="secondary">مشاهده محصولات</button>
+</section> -->
+<div
+  class="w-full mx-auto bg-slate-700 overflow-hidden transition-all duration-500 ease-in-out"
+>
+  <!-- Cover -->
+  <div class="relative h-40 sm:h-60">
+    <img src="trucks.jpg" alt="Cover" class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Profile Info -->
+  <div
+    class="flex flex-col max-w-7xl mx-auto sm:flex-row items-center sm:items-end sm:justify-between p-4 gap-4 transition-all duration-500 ease-in-out"
+  >
+    <!-- Avatar + Name -->
+    <div class="flex items-center gap-3">
+      <div
+        class="w-20 h-20 rounded-full border-4 px-3 py-2 z-900 bg-slate-900 -mt-12 sm:-mt-16 transition-all duration-500 ease-in-out"
+      >
+        <img src="logo.png" alt="Avatar" />
+      </div>
+
+      <!-- <h2 class="text-xl font-bold secondary-text">Aysan Khodro</h2> -->
+      <img src="logo-name.png" class="max-w-40" alt="Avatar" />
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+      <button mat-raised-button class="secondary">مشاهده محصولات</button>
+    </div>
+  </div>
+</div>
+
+<!-- کارت محصولات -->
+<div class="products">
+  <mat-card class="product-card" *ngFor="let p of products">
+    <mat-card-header>
+      <img mat-card-lg-image [src]="p.image" />
+      <mat-card-title>{{ p.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>ظرفیت: {{ p.capacity }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button>جزئیات</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
