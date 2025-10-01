@@ -65,7 +65,7 @@
               >صفحه اصلی</a
             >
             <a
-              href="#"
+              [routerLink]="'/about-us'"
               class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
               >درباره ما</a
             >
@@ -90,7 +90,7 @@
               >وبلاگ</a
             >
             <a
-              href="#"
+              [routerLink]="'/contact-us'"
               class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
               >تماس با ما</a
             >
@@ -164,7 +164,7 @@
       >صفحه اصلی</a
     >
     <a
-      href="#"
+      [routerLink]="'/about-us'"
       class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
       >درباره ما</a
     >
@@ -189,62 +189,12 @@
       >وبلاگ</a
     >
     <a
-      href="#"
+      [routerLink]="'/contact-us'"
       class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
       >تماس با ما</a
     >
   </div>
   }
 </nav>
-
-<!-- هیرو -->
-<!-- <section class="hero">
-  <h1>حرکت با اطمینان، تولید با کیفیت</h1>
-  <button mat-raised-button class="secondary">مشاهده محصولات</button>
-</section> -->
-<div
-  class="w-full mx-auto bg-slate-700 overflow-hidden transition-all duration-500 ease-in-out"
->
-  <!-- Cover -->
-  <div class="relative h-40 sm:h-60">
-    <img src="trucks.jpg" alt="Cover" class="w-full h-full object-cover" />
-  </div>
-
-  <!-- Profile Info -->
-  <div
-    class="flex flex-col max-w-7xl mx-auto sm:flex-row items-center sm:items-end sm:justify-between p-4 gap-4 transition-all duration-500 ease-in-out"
-  >
-    <!-- Avatar + Name -->
-    <div class="flex items-center gap-3">
-      <div
-        class="w-20 h-20 rounded-full border-4 px-3 py-2 z-900 bg-slate-900 -mt-12 sm:-mt-16 transition-all duration-500 ease-in-out"
-      >
-        <img src="logo.png" alt="Avatar" />
-      </div>
-
-      <!-- <h2 class="text-xl font-bold secondary-text">Aysan Khodro</h2> -->
-      <img src="logo-name.png" class="max-w-40" alt="Avatar" />
-    </div>
-
-    <!-- Buttons -->
-    <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-      <button mat-raised-button class="secondary">مشاهده محصولات</button>
-    </div>
-  </div>
-</div>
-
-<!-- کارت محصولات -->
-<div class="products">
-  <mat-card class="product-card" *ngFor="let p of products">
-    <mat-card-header>
-      <img mat-card-lg-image [src]="p.image" />
-      <mat-card-title>{{ p.name }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>ظرفیت: {{ p.capacity }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-flat-button>جزئیات</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+<router-outlet></router-outlet>
+<footer></footer>

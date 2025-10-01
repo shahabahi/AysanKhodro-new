@@ -13,11 +13,33 @@
   font-family: "iranSans-r";
   src: url(./../public/irsans-l.ttf) format("truetype");
 }
-
-// @font-face {
-//   font-family: "iranSans-b";
-//   src: url(irsans-b.ttf) format("truetype");
-// }
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./../public/mat.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Material Icons Outlined";
+  font-style: normal;
+  font-weight: 100;
+  src: url(./../public/mat2.woff2) format("woff2");
+}
+.material-icons {
+  font-family: "Material Icons Outlined" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px !important;
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}
 
 * {
   font-family: "iranSans-r" !important;
