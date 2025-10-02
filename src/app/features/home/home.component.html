@@ -1,10 +1,19 @@
 <div
   class="w-full mx-auto bg-slate-700 overflow-hidden transition-all duration-500 ease-in-out"
 >
-  <div class="relative h-40 sm:h-60">
-    <img src="trucks.jpg" alt="Cover" class="w-full h-full object-cover" />
+  <div class="relative h-[calc(100vh-130px)] sm:h-[calc(100vh-70px)]">
+    <img
+      src="final1.jpg"
+      alt="Cover"
+      class="w-full h-full object-cover object-bottom"
+    />
   </div>
-
+  <h1
+    class="absolute text-center sm:text-right left-0 right-0 text-shadow-lg top-[10vh] sm:top-[50vh] md:top-[45vh] text-2xl sm:text-4xl md:text-5xl text-white font-black flex-col max-w-7xl mx-auto sm:flex-row items-center sm:items-end sm:justify-between p-4 gap-4 transition-all duration-500 ease-in-out"
+  >
+    آیسان خودرو<br /><br />
+    پیشتاز نسل نو صنعت خودرو
+  </h1>
   <div
     class="flex flex-col max-w-7xl mx-auto sm:flex-row items-center sm:items-end sm:justify-between p-4 gap-4 transition-all duration-500 ease-in-out"
   >
@@ -23,8 +32,63 @@
     </div>
   </div>
 </div>
+<div class="bg-gray-200">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <div
+      class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center"
+    >
+      <!-- ورود کاربران -->
+      <div
+        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-indigo-600 cursor-pointer transition"
+      >
+        <div class="w-2/3 text-right">
+          <p class="font-bold text-lg">ورود کاربران</p>
+        </div>
+        <div class="w-1/3 flex justify-center">
+          <img src="gallery/users.png" class="w-20 h-20 object-contain" />
+        </div>
+      </div>
 
-<div class="products">
+      <!-- فروش قطعات -->
+      <div
+        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-indigo-600 cursor-pointer transition"
+      >
+        <div class="w-2/3 text-right">
+          <p class="font-bold text-lg">فروش قطعات</p>
+        </div>
+        <div class="w-1/3 flex justify-center">
+          <img src="gallery/parts.png" class="w-20 h-20 object-contain" />
+        </div>
+      </div>
+
+      <!-- فروش ویژه -->
+      <div
+        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-indigo-600 cursor-pointer transition"
+      >
+        <div class="w-2/3 text-right">
+          <p class="font-bold text-lg">فروش ویژه</p>
+        </div>
+        <div class="w-1/3 flex justify-center">
+          <img src="gallery/sale.png" class="w-20 h-20 object-contain" />
+        </div>
+      </div>
+
+      <!-- نوبت دهی نمایندگی -->
+      <div
+        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-indigo-600 cursor-pointer transition"
+      >
+        <div class="w-2/3 text-right">
+          <p class="font-bold text-lg">نوبت نمایندگی</p>
+        </div>
+        <div class="w-1/3 flex justify-center">
+          <img src="gallery/order.png" class="w-20 h-20 object-contain" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-gray-200 products">
   <mat-card class="product-card" *ngFor="let p of products">
     <mat-card-header>
       <img mat-card-lg-image [src]="p.image" />
@@ -34,7 +98,7 @@
       <p>ظرفیت: {{ p.capacity }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-flat-button>جزئیات</button>
+      <button mat-flat-button [routerLink]="'/product'">جزئیات</button>
     </mat-card-actions>
   </mat-card>
 </div>

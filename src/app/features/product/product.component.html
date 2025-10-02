@@ -1,0 +1,155 @@
+<div class="bg-gray-200 min-h-screen p-8">
+  <!-- بخش بالایی (گالری + خلاصه محصول) -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- گالری محصول -->
+    <div class="md:col-span-2 bg-white p-6 rounded-2xl shadow-lg">
+      <gallery
+        gallerize
+        [items]="images"
+        [thumbPosition]="'bottom'"
+        thumbs
+        bullets
+        [imageSize]="'cover'"
+        [scrollBehavior]="'smooth'"
+      ></gallery>
+    </div>
+
+    <!-- جزئیات محصول -->
+    <div
+      class="bg-white p-6 rounded-2xl shadow-lg flex flex-col justify-between"
+    >
+      <div>
+        <h1 class="text-2xl font-bold text-primary mb-2">
+          کامیونت ایسوزو NPR - ۶ تن
+        </h1>
+        <p class="text-gray-600 mb-4">
+          کامیونت پرقدرت و پرفروش ایسوزو برای حمل بار شهری و بین‌شهری.
+        </p>
+        <ul class="text-gray-700 space-y-2 mb-6">
+          <li>⚙️ موتور دیزل ۵.۲ لیتری</li>
+          <li>🚚 ظرفیت باربری: ۶ تن</li>
+          <li>🛋️ کابین راحت و ارگونومیک</li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-gray-500 text-sm">قیمت پایه</p>
+        <p class="text-2xl font-bold text-secondary mb-4">تماس بگیرید</p>
+        <button mat-raised-button class="w-full py-2 secondary">تماس</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- تب‌ها -->
+  <div class="max-w-7xl mx-auto mt-8 bg-white rounded-2xl shadow-lg">
+    <mat-tab-group>
+      <!-- معرفی -->
+      <mat-tab label="معرفی">
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-4">معرفی محصول</h2>
+          <p class="text-gray-700 leading-relaxed">
+            کامیونت ایسوزو NPR با ظرفیت ۶ تن مناسب حمل بارهای سنگین در مسیرهای
+            شهری و جاده‌ای است. این محصول با موتور قدرتمند، کابین ارگونومیک و
+            استانداردهای روز ایمنی طراحی شده است. طراحی مدرن و مصرف سوخت بهینه،
+            بهره‌وری را بالا برده و هزینه‌های حمل‌ونقل را کاهش می‌دهد.
+          </p>
+        </div>
+      </mat-tab>
+
+      <!-- بررسی تخصصی -->
+      <mat-tab label="بررسی تخصصی">
+        <div class="p-6 space-y-8">
+          <div>
+            <h3 class="font-bold text-lg mb-2">موتور</h3>
+            <img
+              src="gallery/7.jpg"
+              class="w-full sm:w-150 m-auto rounded mb-2"
+            />
+            <p class="text-gray-600">
+              موتور ۵.۲ لیتری دیزل با توان بالا و مصرف سوخت بهینه طراحی شده...
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2">سیستم تعلیق</h3>
+            <img
+              src="gallery/5.jpg"
+              class="w-full sm:w-150 m-auto rounded mb-2"
+            />
+            <p class="text-gray-600">
+              سیستم تعلیق مقاوم برای مسیرهای طولانی و بارهای سنگین...
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2">کابین</h3>
+            <img
+              src="gallery/8.jpg"
+              class="w-full sm:w-150 m-auto rounded mb-2"
+            />
+            <p class="text-gray-600">
+              کابین ارگونومیک با امکانات رفاهی و طراحی مناسب رانندگی طولانی...
+            </p>
+          </div>
+        </div>
+      </mat-tab>
+
+      <!-- مشخصات فنی -->
+      <mat-tab label="مشخصات فنی">
+        <div class="p-6">
+          <h2 class="text-lg font-bold mb-4">مشخصات فنی ایسوزو NPR</h2>
+          <table
+            class="min-w-full border border-gray-200 divide-y divide-gray-200 text-gray-700"
+          >
+            <tbody>
+              <tr
+                *ngFor="let spec of showMoreSpecs ? specs : specs.slice(0, 5)"
+              >
+                <td class="w-1/3 px-4 py-3 bg-gray-50 font-bold">
+                  {{ spec.key }}
+                </td>
+                <td class="px-4 py-3">{{ spec.value }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <a
+            class="flex items-center gap-1 hover:bg-transparent"
+            color="primary"
+            (click)="toggleSpecs()"
+          >
+            <span> {{ showMoreSpecs ? "بستن" : "مشاهده بیشتر" }}</span>
+            <span class="material-icons">chevron_left</span>
+          </a>
+        </div>
+      </mat-tab>
+
+      <!-- نظرات -->
+      <mat-tab label="نظرات کاربران">
+        <div class="p-6">
+          <h2 class="text-lg font-bold mb-4">نظرات کاربران</h2>
+          <p class="text-gray-600">هنوز نظری برای این محصول ثبت نشده است.</p>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <!-- محصولات مشابه -->
+  <div class="max-w-7xl mx-auto mt-8">
+    <h3 class="text-xl font-bold text-primary mb-4">محصولات مشابه</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white rounded-2xl shadow-lg p-4">
+        <img
+          src="gallery/2.jpg"
+          class="w-full h-40 object-cover rounded mb-2"
+        />
+        <h4 class="font-bold text-gray-800">ایسوزو NMR</h4>
+        <p class="text-gray-600 text-sm">ظرفیت ۴ تن</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg p-4">
+        <img
+          src="gallery/2.jpg"
+          class="w-full h-40 object-cover rounded mb-2"
+        />
+        <h4 class="font-bold text-gray-800">ایسوزو FVR</h4>
+        <p class="text-gray-600 text-sm">ظرفیت ۱۰ تن</p>
+      </div>
+    </div>
+  </div>
+</div>

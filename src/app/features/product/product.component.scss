@@ -1,0 +1,13 @@
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.no-hover:hover {
+  background-color: transparent !important;
+}
+.no-hover.cdk-focused,
+.no-hover.cdk-program-focused {
+  background-color: transparent !important;
+}

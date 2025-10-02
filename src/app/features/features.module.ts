@@ -16,15 +16,18 @@ import {
   MatLabel,
 } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input';
-
+import { ProductComponent } from './product/product.component';
+import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from 'ng-gallery/lightbox';
+import { LIGHTBOX_CONFIG, LightboxConfig } from 'ng-gallery/lightbox';
 @NgModule({
   declarations: [
     FeaturesComponent,
     AboutUsComponent,
     ContactUsComponent,
     HomeComponent,
+    ProductComponent,
   ],
   imports: [
     CommonModule,
@@ -37,12 +40,21 @@ import { MatInputModule } from '@angular/material/input';
     MatLabel,
     MatInputModule,
     MatFormFieldModule,
+    GalleryModule,
+    LightboxModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: { appearance: 'outline' },
+    },
+    {
+      provide: LIGHTBOX_CONFIG,
+      useValue: {
+        keyboardShortcuts: false,
+        exitAnimationTime: 1000,
+      } as LightboxConfig,
     },
   ],
 })
