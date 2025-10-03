@@ -50,7 +50,8 @@
 }
 .secondary {
   background-color: var(--color-secondary) !important;
-  color: var(--color-primary) !important;
+  color: var(--color-neutral) !important;
+  font-weight: 900 !important;
 }
 .secondary-text {
   color: var(--color-secondary) !important;
