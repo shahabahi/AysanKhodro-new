@@ -11,7 +11,6 @@
     [ngClass]="isHome ? 'sm:py-4' : ''"
   >
     <div class="relative flex h-16 items-center justify-between">
-      <!-- Mobile menu button -->
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <button
           type="button"
@@ -20,7 +19,6 @@
         >
           <span class="sr-only">Open main menu</span>
 
-          <!-- آیکن باز -->
           @if (!mobileMenuOpen) {
           <svg
             viewBox="0 0 24 24"
@@ -36,10 +34,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          }
-
-          <!-- آیکن بستن -->
-          @if (mobileMenuOpen) {
+          } @if (mobileMenuOpen) {
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -58,7 +53,6 @@
         </button>
       </div>
 
-      <!-- لوگو و منوی دسکتاپ -->
       <div
         class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
       >
@@ -85,7 +79,7 @@
               >درباره ما</a
             >
             <a
-              href="#"
+              [routerLink]="'/products'"
               routerLinkActive="bg-gray-950/50 text-white"
               [routerLinkActiveOptions]="{ exact: true }"
               [ngClass]="isHome ? 'text-lg' : 'text-base'"
@@ -128,7 +122,6 @@
         </div>
       </div>
 
-      <!-- بخش راست (نوتیفیکیشن و پروفایل) -->
       <div
         class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
       >
@@ -171,7 +164,6 @@
     </div>
   </div>
 
-  <!-- منوی موبایل -->
   @if (mobileMenuOpen) {
   <div
     [ngClass]="isHome ? 'bg-slate-900/80' : 'bg-slate-800'"
@@ -192,7 +184,7 @@
       >درباره ما</a
     >
     <a
-      href="#"
+      [routerLink]="'/products'"
       routerLinkActive="bg-gray-950/50 text-white"
       [routerLinkActiveOptions]="{ exact: true }"
       class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
@@ -232,13 +224,11 @@
 <router-outlet></router-outlet>
 <footer class="bg-slate-800 text-gray-300 py-10">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-    <!-- لوگو و معرفی -->
     <div>
       <img src="logo.png" alt="Aysan Khodro" class="h-16 mb-4" />
       <p class="text-sm leading-6">
         شرکت آیسان خودرو، پیشرو در صنعت خودروهای سنگین و خدمات پس از فروش.
       </p>
-      <!-- شبکه‌های اجتماعی با آیکن متریال -->
       <div class="flex space-x-4 mt-4 text-white text-2xl">
         <a href="#" aria-label="Telegram">
           <img class="w-8 h-8" src="/social/telegram-app.svg" alt="" />
@@ -255,7 +245,6 @@
       </div>
     </div>
 
-    <!-- بخش لینک‌ها - دو ستون در موبایل -->
     <div class="md:col-span-2">
       <h4 class="text-white font-semibold mb-4">لینک‌ها</h4>
       <div class="grid grid-cols-2 gap-4 text-sm">
@@ -284,7 +273,6 @@
       </div>
     </div>
 
-    <!-- تماس -->
     <div>
       <h4 class="text-white font-semibold mb-4">ارتباط با ما</h4>
       <p class="text-sm">تهران، خیابان ...</p>

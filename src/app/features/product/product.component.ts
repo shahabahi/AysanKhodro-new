@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GalleryItem, ImageItem } from 'ng-gallery';
+import { Product } from '../products/productModel';
+import { ActivatedRoute } from '@angular/router';
+import { ProductService } from '../products/service/product.service';
 
 @Component({
   selector: 'app-product',
@@ -7,7 +10,18 @@ import { GalleryItem, ImageItem } from 'ng-gallery';
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss',
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit {
+  product!: Product | undefined;
+
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService
+  ) {}
+
+  ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.product = this.productService.getProduct(id);
+  }
   showMoreIntro = false;
   showMoreSpecs = false;
   images: GalleryItem[] = [

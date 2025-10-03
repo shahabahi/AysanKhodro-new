@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from '../products/productModel';
+import { ProductService } from '../products/service/product.service';
 
 @Component({
   selector: 'app-home',
@@ -7,42 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  products = [
-    {
-      name: 'کامیونت ایسوزو NPR',
-      capacity: '6 تن',
-      model: 'NPR-75K',
-      image: 'truck.png',
-    },
-    {
-      name: 'کامیونت ایسوزو NPR',
-      capacity: '8 تن',
-      model: 'NPR-85K',
-      image: 'truck.png',
-    },
-    {
-      name: 'کامیونت ایسوزو NPR',
-      capacity: '10 تن',
-      model: 'NPR-95K',
-      image: 'truck.png',
-    },
-    {
-      name: 'کامیونت ایسوزو NPR',
-      capacity: '12 تن',
-      model: 'NPR-120K',
-      image: 'truck.png',
-    },
-    {
-      name: 'کامیونت ایسوزو NQR',
-      capacity: '14 تن',
-      model: 'NQR-140K',
-      image: 'truck.png',
-    },
-    {
-      name: 'کامیونت ایسوزو FVR',
-      capacity: '18 تن',
-      model: 'FVR-180K',
-      image: 'truck.png',
-    },
-  ];
+  products: Product[];
+
+  constructor(private productService: ProductService) {
+    this.products = this.productService.getAll();
+  }
 }

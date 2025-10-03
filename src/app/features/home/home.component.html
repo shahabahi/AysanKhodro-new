@@ -39,7 +39,7 @@
     >
       <!-- ورود کاربران -->
       <div
-        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-indigo-600 cursor-pointer transition"
+        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition"
       >
         <div class="w-2/3 text-right">
           <p class="font-bold text-lg">ورود کاربران</p>
@@ -51,7 +51,7 @@
 
       <!-- فروش قطعات -->
       <div
-        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-indigo-600 cursor-pointer transition"
+        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition"
       >
         <div class="w-2/3 text-right">
           <p class="font-bold text-lg">فروش قطعات</p>
@@ -63,7 +63,7 @@
 
       <!-- فروش ویژه -->
       <div
-        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-indigo-600 cursor-pointer transition"
+        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition"
       >
         <div class="w-2/3 text-right">
           <p class="font-bold text-lg">فروش ویژه</p>
@@ -75,7 +75,7 @@
 
       <!-- نوبت دهی نمایندگی -->
       <div
-        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-indigo-600 cursor-pointer transition"
+        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition"
       >
         <div class="w-2/3 text-right">
           <p class="font-bold text-lg">نوبت نمایندگی</p>
@@ -88,17 +88,4 @@
   </div>
 </div>
 
-<div class="bg-gray-200 products">
-  <mat-card class="product-card" *ngFor="let p of products">
-    <mat-card-header>
-      <img mat-card-lg-image [src]="p.image" />
-      <mat-card-title>{{ p.name }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>ظرفیت: {{ p.capacity }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-flat-button [routerLink]="'/product'">جزئیات</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+<app-products></app-products>
