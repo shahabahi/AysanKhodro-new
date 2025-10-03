@@ -23,6 +23,7 @@ import { LightboxModule } from 'ng-gallery/lightbox';
 import { LIGHTBOX_CONFIG, LightboxConfig } from 'ng-gallery/lightbox';
 import { ProductsComponent } from './products/products.component';
 import { SaleComponent } from './sale/sale.component';
+import { AfterSellComponent } from './after-sell/after-sell.component';
 @NgModule({
   declarations: [
     FeaturesComponent,
@@ -32,6 +33,7 @@ import { SaleComponent } from './sale/sale.component';
     ProductComponent,
     ProductsComponent,
     SaleComponent,
+    AfterSellComponent,
   ],
   imports: [
     CommonModule,
