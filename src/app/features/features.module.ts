@@ -22,6 +22,7 @@ import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
 import { LIGHTBOX_CONFIG, LightboxConfig } from 'ng-gallery/lightbox';
 import { ProductsComponent } from './products/products.component';
+import { SaleComponent } from './sale/sale.component';
 @NgModule({
   declarations: [
     FeaturesComponent,
@@ -30,6 +31,7 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     ProductComponent,
     ProductsComponent,
+    SaleComponent,
   ],
   imports: [
     CommonModule,
