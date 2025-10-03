@@ -110,10 +110,8 @@
       <div
         class="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
       >
-        <div
-          *ngFor="let member of members"
-          class="bg-white rounded-xl shadow-lg p-6 text-center"
-        >
+        @for (member of members; track $index) {
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
           <img
             [src]="member.image"
             class="w-24 h-initial rounded-full mx-auto mb-4"
@@ -122,6 +120,7 @@
           <h3 class="text-lg font-bold text-primary">{{ member.name }}</h3>
           <p class="text-gray-500">{{ member.role }}</p>
         </div>
+        }
       </div>
     </div>
   </div>

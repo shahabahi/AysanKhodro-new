@@ -32,11 +32,9 @@
                 class="material-symbols-outlined"
                 >person</mat-icon
               >
-              <mat-error
-                *ngIf="contactForm.controls['fullName'].hasError('required')"
-              >
-                نام الزامی است
-              </mat-error>
+              @if(contactForm.controls['fullName'].hasError('required')){<mat-error>
+                نام الزامی است </mat-error
+              >}
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="w-full custom-field">
@@ -48,16 +46,11 @@
                 formControlName="email"
               />
               <mat-icon class="material-icons" matSuffix>email</mat-icon>
-              <mat-error
-                *ngIf="contactForm.controls['email'].hasError('required')"
-              >
-                ایمیل الزامی است
-              </mat-error>
-              <mat-error
-                *ngIf="contactForm.controls['email'].hasError('email')"
-              >
-                فرمت ایمیل صحیح نیست
-              </mat-error>
+              @if(contactForm.controls['email'].hasError('required')){<mat-error>
+                ایمیل الزامی است </mat-error
+              >} @if(contactForm.controls['email'].hasError('email')){<mat-error>
+                فرمت ایمیل صحیح نیست </mat-error
+              >}
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="w-full custom-field">
@@ -69,16 +62,12 @@
                 formControlName="message"
               ></textarea>
               <mat-icon class="material-icons" matSuffix>message</mat-icon>
-              <mat-error
-                *ngIf="contactForm.controls['message'].hasError('required')"
-              >
-                پیام الزامی است
-              </mat-error>
-              <mat-error
-                *ngIf="contactForm.controls['message'].hasError('minlength')"
-              >
-                پیام باید حداقل ۱۰ کاراکتر باشد
-              </mat-error>
+              @if(contactForm.controls['message'].hasError('required')){<mat-error>
+                پیام الزامی است </mat-error
+              >}
+              @if(contactForm.controls['message'].hasError('minlength')){<mat-error>
+                پیام باید حداقل ۱۰ کاراکتر باشد </mat-error
+              >}
             </mat-form-field>
 
             <button mat-raised-button class="w-full py-2 secondary">
