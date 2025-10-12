@@ -1,0 +1,47 @@
+<div class="min-h-screen flex flex-col items-center justify-center p-6 bg-gray-50">
+  <div class="flex justify-center gap-8 flex-wrap md:flex-nowrap w-full max-w-6xl">
+
+    <!-- کارت اول: Webmail -->
+    <div class="flex flex-col items-center w-72">
+      <div class="w-72 h-72 flex items-center justify-center mb-4">
+        <img src="email.png" alt="پست الکترونیکی آیسان خودرو" class="w-64 h-64 object-contain">
+      </div>
+      <a [routerLink]="['/', currentLang, 'webmail']"
+         class="flex items-center justify-center w-52 h-12 text-blue-500 font-semibold border-2 border-blue-300 rounded-full hover:bg-blue-50 transition">
+        <span>ورود</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- کارت دوم: Hooshmand -->
+    <div class="flex flex-col items-center w-72">
+      <div class="w-72 h-72 flex items-center justify-center mb-4">
+        <img src="hooshmand.png" alt="سیستم جامع آیسان خودرو" class="w-64 h-64 object-contain">
+      </div>
+      <a 
+         class="flex items-center justify-center w-52 h-12 text-blue-500 font-semibold border-2 border-blue-300 rounded-full hover:bg-blue-50 transition">
+        <span>ورود</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- کارت سوم: Automation -->
+    <div class="flex flex-col items-center w-72">
+      <div class="w-72 h-72 flex items-center justify-center mb-4">
+        <img src="automation.png" alt="سیستم اتوماسیون اداری آیسان خودرو" class="w-64 h-64 object-contain">
+      </div>
+      <a 
+         class="flex items-center justify-center w-52 h-12 text-blue-500 font-semibold border-2 border-blue-300 rounded-full hover:bg-blue-50 transition">
+        <span>ورود</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ms-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</div>

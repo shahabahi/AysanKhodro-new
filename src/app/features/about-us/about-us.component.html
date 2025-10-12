@@ -113,10 +113,10 @@
         @for (member of members; track $index) {
         <div class="bg-white rounded-xl shadow-lg p-6 text-center">
           <img
-            [src]="member.image"
-            class="w-24 h-initial rounded-full mx-auto mb-4"
-            alt="team"
-          />
+          [src]="member.image"
+          class="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+          alt="team"
+        />
           <h3 class="text-lg font-bold text-primary">{{ member.name }}</h3>
           <p class="text-gray-500">{{ member.role }}</p>
         </div>

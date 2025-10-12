@@ -8,7 +8,7 @@ LABEL version="1.1"
 
 COPY /nginx.conf  /etc/nginx/nginx.conf
 COPY /nginx.conf  /usr/share/nginx/html
-COPY /dist/aysan-khodro /usr/share/nginx/html
+COPY /dist/aysan-khodro/browser /usr/share/nginx/html
 
 EXPOSE 9000
 

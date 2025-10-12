@@ -1,80 +1,66 @@
-<div
-  class="w-full mx-auto bg-slate-700 overflow-hidden transition-all duration-500 ease-in-out"
->
+<div class="w-full mx-auto bg-slate-700 overflow-hidden transition-all duration-500 ease-in-out">
   <div class="relative h-[calc(100vh-130px)] sm:h-[calc(100vh-70px)]">
-    <img
-      src="final1.jpg"
-      alt="Cover"
-      class="w-full h-full object-cover object-bottom"
-    />
+    <img src="final1.jpg" alt="Cover" class="w-full h-full object-cover object-bottom" />
   </div>
-  <h1
-    class="absolute text-center sm:text-right left-0 right-0 text-shadow-lg top-[10vh] sm:top-[50vh] md:top-[45vh] text-2xl sm:text-4xl md:text-5xl text-white font-black flex-col max-w-7xl mx-auto sm:flex-row items-center sm:items-end sm:justify-between p-4 gap-4 transition-all duration-500 ease-in-out"
-  >
-    آیسان خودرو<br /><br />
-    پیشتاز نسل نو صنعت خودرو
-  </h1>
+
   <div
-    class="flex flex-col max-w-7xl mx-auto sm:flex-row items-center sm:items-end sm:justify-between p-4 gap-4 transition-all duration-500 ease-in-out"
+    class="absolute text-center sm:text-right left-0 right-0 text-shadow-lg
+    top-[12vh] sm:top-[45vh] md:top-[40vh]
+    text-2xl sm:text-4xl md:text-5xl text-white font-black flex-col
+    max-w-7xl mx-auto sm:flex-row items-center sm:items-end sm:justify-between
+    p-4 gap-4 transition-all duration-500 ease-in-out"
   >
+    <h1 i18n="@@hero.title">آیسان خودرو</h1>
+    <p i18n="@@hero.subtitle">پیشتاز نسل نو صنعت خودرو</p>
+  </div>
+
+  <div class="flex flex-col max-w-7xl mx-auto sm:flex-row items-center sm:items-end sm:justify-between p-4 gap-4 transition-all duration-500 ease-in-out">
     <div class="flex items-center gap-3">
-      <div
-        class="w-20 h-20 rounded-full border-4 px-3 py-2 z-900 bg-slate-900 -mt-12 sm:-mt-16 transition-all duration-500 ease-in-out"
-      >
+      <div class="w-20 h-20 rounded-full border-4 px-3 py-2 z-900 bg-slate-900 -mt-12 sm:-mt-16 transition-all duration-500 ease-in-out">
         <img src="logo.png" alt="Avatar" />
       </div>
-
       <img src="logo-name.png" class="max-w-40" alt="Avatar" />
     </div>
 
     <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-      <button mat-raised-button class="secondary">مشاهده محصولات</button>
+      <button mat-raised-button class="secondary" i18n="@@button.viewProducts">مشاهده محصولات</button>
     </div>
   </div>
 </div>
+
 <div class="bg-gray-200">
   <div class="max-w-7xl mx-auto px-6 py-10">
-    <div
-      class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center"
-    >
-      <div
-        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition"
-      >
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+      <div class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition">
         <div class="w-2/3 text-right">
-          <p class="font-bold text-lg">ورود کاربران</p>
+          <p i18n="@@card.login" class="font-bold text-lg">ورود کاربران</p>
         </div>
         <div class="w-1/3 flex justify-center">
           <img src="gallery/users.png" class="w-20 h-20 object-contain" />
         </div>
       </div>
 
-      <div
-        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition"
-      >
+      <div class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition">
         <div class="w-2/3 text-right">
-          <p class="font-bold text-lg">فروش قطعات</p>
+          <p i18n="@@card.parts" class="font-bold text-lg">فروش قطعات</p>
         </div>
         <div class="w-1/3 flex justify-center">
           <img src="gallery/parts.png" class="w-20 h-20 object-contain" />
         </div>
       </div>
 
-      <div
-        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition"
-      >
+      <div class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition">
         <div class="w-2/3 text-right">
-          <p class="font-bold text-lg">فروش ویژه</p>
+          <p i18n="@@card.sale" class="font-bold text-lg">فروش ویژه</p>
         </div>
         <div class="w-1/3 flex justify-center">
           <img src="gallery/sale.png" class="w-20 h-20 object-contain" />
         </div>
       </div>
 
-      <div
-        class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition"
-      >
+      <div class="flex items-center justify-between bg-slate-800 text-white rounded-xl shadow-md p-6 hover:bg-slate-600 cursor-pointer transition">
         <div class="w-2/3 text-right">
-          <p class="font-bold text-lg">نوبت نمایندگی</p>
+          <p i18n="@@card.appointment" class="font-bold text-lg">نوبت نمایندگی</p>
         </div>
         <div class="w-1/3 flex justify-center">
           <img src="gallery/order.png" class="w-20 h-20 object-contain" />

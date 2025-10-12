@@ -7,6 +7,9 @@ import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
 import { SaleComponent } from './sale/sale.component';
 import { AfterSellComponent } from './after-sell/after-sell.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { WebmailComponent } from './webmail/webmail.component';
+
 
 export const routes: Routes = [
   {
@@ -20,6 +23,8 @@ export const routes: Routes = [
       { path: 'services', component: AfterSellComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'product/:id', component: ProductComponent },
+      { path: 'user-login', component: UserLoginComponent},
+      { path: 'webmail', component: WebmailComponent },
     ],
   },
   {

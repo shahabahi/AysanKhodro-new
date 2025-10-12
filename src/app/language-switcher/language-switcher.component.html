@@ -1,0 +1,11 @@
+<div class="flex gap-4">
+  <button
+    *ngFor="let lang of languages"
+    (click)="switch(lang.code)"
+    [class.bg-blue-600]="lang.code === currentLang"
+    [class.bg-slate-700]="lang.code !== currentLang"
+    class="px-4 py-2 rounded text-white hover:bg-slate-500"
+  >
+    {{ lang.label }}
+  </button>
+</div>

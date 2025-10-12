@@ -1,6 +1,6 @@
 @use "@angular/material" as mat;
 @use "../theme-colors" as my-theme;
-@import "tailwindcss";
+@use "tailwindcss";
 :root {
   --color-primary: #0a2342;
   --color-secondary: #d4af37;
