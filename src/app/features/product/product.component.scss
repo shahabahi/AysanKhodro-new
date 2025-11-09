@@ -1,9 +1,13 @@
 .line-clamp-3 {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  display: box; 
   -webkit-box-orient: vertical;
+  box-orient: vertical;
   overflow: hidden;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; 
 }
+
 .no-hover:hover {
   background-color: transparent !important;
 }

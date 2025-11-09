@@ -1,4 +1,3 @@
-import { loadTranslations } from '@angular/localize';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 
@@ -10,14 +9,7 @@ import { AppModule } from './app/app.module';
   // ✅ Store for later use
   localStorage.setItem('appLang', lang);
 
-  // ✅ Load translations before bootstrap
-  try {
-    const translations = await import(`./locale/messages.${lang}.json`);
-    loadTranslations(translations.default);
-  } catch (err) {
-    console.warn(`No translations found for ${lang}`, err);
-  }
-
+ 
   platformBrowserDynamic()
     .bootstrapModule(AppModule)
     .catch(err => console.error(err));

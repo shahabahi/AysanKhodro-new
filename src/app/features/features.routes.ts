@@ -9,6 +9,7 @@ import { SaleComponent } from './sale/sale.component';
 import { AfterSellComponent } from './after-sell/after-sell.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { WebmailComponent } from './webmail/webmail.component';
+import { NewsComponent } from './news/news.component';
 
 
 export const routes: Routes = [
@@ -25,6 +26,7 @@ export const routes: Routes = [
       { path: 'product/:id', component: ProductComponent },
       { path: 'user-login', component: UserLoginComponent},
       { path: 'webmail', component: WebmailComponent },
+      { path: 'news', component: NewsComponent },
     ],
   },
   {

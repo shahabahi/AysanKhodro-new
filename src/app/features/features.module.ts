@@ -21,7 +21,8 @@ import { ProductsComponent } from './products/products.component';
 import { SaleComponent } from './sale/sale.component';
 import { AfterSellComponent } from './after-sell/after-sell.component';
 import { UserLoginComponent } from './user-login/user-login.component';
-import { WebmailComponent } from './webmail/webmail.component';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { WebmailComponent } from './webmail/webmail.component';
     MatFormFieldModule,
     MatInputModule,
     GalleryModule,
-    LightboxModule
+    LightboxModule,
+    TranslateModule
   ],
   providers: [
     {
