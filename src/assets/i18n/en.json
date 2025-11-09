@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "title": "Aysan Khodro",
+    "subtitle": "Pioneer of the new automotive generation"
+  },
+  "menu": {
+    "home": "Home",
+    "news": "News",
+    "contact": "Contact Us"
+  },
+  "dealer_order": "Dealer Appointment",
+  "special_sale": "Special Sale",
+  "parts_sale": "Parts Sale",
+  "user_login": "User Login"
+}
