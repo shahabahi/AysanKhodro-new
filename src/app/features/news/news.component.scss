@@ -56,9 +56,17 @@
 }
 
 .news-image {
-  width: 230px;
-  height: 230px;
+  width: 300px;
+  height: 270px;
   object-fit: cover;
+  padding: 10px 10px;
+}
+
+.news-image2 {
+  width: 370px;
+  height: 370px;
+  object-fit: cover;
+  padding: 30px 10px;
 }
 
 .news-content {
